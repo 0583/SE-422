@@ -84,9 +84,14 @@ Technically, the Dual-Channel could bring 2x improvements for the memory perform
 Generally the price of each bit is getting cheaper. In the last 18 months, the downgrade of DRAM price is approximately 10%. Here are some statistics coming from PCPartPicker[9]:
 
 * DDR4-2133 288-pin DIMM 2x4GB (Average price in USD over last 18 months)
-![](https://github.com/0583/SE-422/blob/master/assignment-1/memory-phase/imgs/trend.ram.288dimm.ddr4_2133.2x4096.90faf3c82a93f439392a56610819edac.png?raw=true)
+![Image 1](https://github.com/0583/SE-422/blob/master/assignment-1/memory-phase/imgs/trend.ram.288dimm.ddr4_2133.2x4096.90faf3c82a93f439392a56610819edac.png?raw=true)
 
 * DDR4-2400 288-pin DIMM 2x4GB (Average price in USD over last 18 months)
+
+![](https://github.com/0583/SE-422/blob/master/assignment-1/memory-phase/imgs/trend.ram.288dimm.ddr4_2400.2x4096.a745e38d2a74ef4fb55e281ca40a5b6a.png?raw=true)
+
+
+You may access more types of DRAM's price at [here](https://pcpartpicker.com/trends/price/memory/).[9]
 
 ## Comments
 
