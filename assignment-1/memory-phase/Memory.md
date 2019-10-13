@@ -91,7 +91,7 @@ Generally the price of each bit is getting cheaper. In the last 18 months, the d
 ![](https://github.com/0583/SE-422/blob/master/assignment-1/memory-phase/imgs/trend.ram.288dimm.ddr4_2400.2x4096.a745e38d2a74ef4fb55e281ca40a5b6a.png?raw=true)
 
 
-You may access more types of DRAM's price at [here](https://pcpartpicker.com/trends/price/memory/).[9]
+You may access more types of DRAM's price [here](https://pcpartpicker.com/trends/price/memory/).[9]
 
 ## Comments
 
