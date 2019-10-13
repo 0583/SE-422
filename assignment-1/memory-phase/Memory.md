@@ -69,11 +69,21 @@ Making it synchronous has an obvious benefit: The memory controller could know e
 
 But here comes a problem. SDRAM has a hidden abbreviation that reads "SDR SDRAM". (What an abbreviation...) The former SDR means Single Data Rate. That means in one single CPU cycle, there's only one read/write could be performed. If there are two requests coming at the same time, they have to queue and wait.
 
-So the improvements comes as DDR SDRAM (two read/write in one single CPU cycle), DDR2 SDRAM, DDR3 SDRAM, DDR4 SDRAM. They're all the solutions for the read/write queue issues. And that quite solves the problem as the CPU cycle goes quicker and quicker.
+So the improvements comes as DDR SDRAM (two read/write in one single CPU cycle), DDR2 SDRAM, DDR3 SDRAM, DDR4 SDRAM. They're all the solutions for the read/write queue issues. And that quite solves the problem as the CPU cycle goes quicker and quicker.[7]
 
 ### Dual-Channel
 
+The dual-channel technique only makes sense when there are more than 1 slices of memory equipped in the PC. Normally without the dual-channel technique, the memory in the mother board would works like a series circuit, that the total in/out bandwidth is still 64-bit, while the capacity doubles.
+
+But with the Dual-Channel technique, the bandwidth and the capacity would be both doubled and the bandwidth would be 128-bit, which is quite a great improvement.
+
+Technically, the Dual-Channel could bring 2x improvements for the memory performance. However now the memory is still too quick to be the bottleneck, so the general performance improvement would not be obvious, which is 5% at most. If your workload doesn't contain anything related to severe memory access, the optimization is almost ignorable. [8]
+
 ## Prices
+
+Generally the price of each bit is getting cheaper. In the last 18 months, the downgrade of DRAM price is approximately 10%. Here are some statistics coming from PCPartPicker[9]:
+
+
 
 ## Comments
 
@@ -92,3 +102,7 @@ So the improvements comes as DDR SDRAM (two read/write in one single CPU cycle),
 `[6]` `https://www.quora.com/Does-higher-frequency-RAM-mean-it-is-faster`, Luc Boulesteix, Does higher frequency RAM mean it is faster
 
 `[7]` `https://cn.transcend-info.com/Support/FAQ-296`, Transcend, DDR4, DDR3, DDR2, DDR 及SDRAM各有何不同
+
+`[8]` `https://zh.wikipedia.org/wiki/雙通道記憶體技術`, Dual-channel, Wikipedia
+
+`[9]` `https://pcpartpicker.com/trends/price/memory/`, Memory price
