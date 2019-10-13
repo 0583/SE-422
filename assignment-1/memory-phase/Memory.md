@@ -51,9 +51,25 @@ Fortunately it was fixed in the later Windows NT series.
 
 ### Frequency
 
+It is quite strange when we know that even a memory has its frequency. You may start to imagine an garbage with a specific frequency... and then become confused. Let's make it clear: A piece of memory that reads "DDR4 2666MHz" implies that it has a maximum throughput of 2666 Mega-transfers per second.
+
+What if it's really so easy. Because as you learned in the ICS, the throughput isn’t the only important metric: otherwise, we’d be using GDDR6 for our CPUs by now. Latency is also a big factor.[6] Generally now the Memory Frequency isn't the major bottleneck in a whole PC, unless under some special cases such as CAD and those extreme gamers' playing experience. So that should not be a problem.
+
 ### Generation
 
+That's critical a lot. Because if you buy some memory that doesn't fit your motherboard, you might not be even able to insert it into your PC. Generally different generations of memory has different protocols and different slots. Some memory just couldn't work with some old-fashioned motherboards and CPUs. So it's quite necessary to figure it out if your current hardware composition is compatible with the memory that you want to buy.
+
 ## Cool Technology
+
+### SDRAM
+
+SDRAM, the abbreviation of Synchronous DRAM, means it could be read and written synchronously. Obviously the synchronous is based on the CPU clock. The old fashioned DRAM is asynchronized when the CPU is going to perform a read or write, that means CPU has to wait several cycles to ensure the operation completes, that causes severe performance issues.
+
+Making it synchronous has an obvious benefit: The memory controller could know exactly how much CPU cycles it needs before having the data stored in/out, so the CPU could save these cycles doing something more meaningful, rather than keep asking the memory controller: "Are you ready? What about now? Are you ready? ..."
+
+But here comes a problem. SDRAM has a hidden abbreviation that reads "SDR SDRAM". (What an abbreviation...) The former SDR means Single Data Rate. That means in one single CPU cycle, there's only one read/write could be performed. If there are two requests coming at the same time, they have to queue and wait.
+
+So the improvements comes as DDR SDRAM (two read/write in one single CPU cycle), DDR2 SDRAM, DDR3 SDRAM, DDR4 SDRAM. They're all the solutions for the read/write queue issues. And that quite solves the problem as the CPU cycle goes quicker and quicker.
 
 ### Dual-Channel
 
@@ -72,3 +88,7 @@ Fortunately it was fixed in the later Windows NT series.
 `[4]` `http://chuquan.me/2016/12/14/computer-boot-process/`, Computer Boot Process
 
 `[5]` The Old New Thing, Windows 开发启示录, Raymond Chen
+
+`[6]` `https://www.quora.com/Does-higher-frequency-RAM-mean-it-is-faster`, Luc Boulesteix, Does higher frequency RAM mean it is faster
+
+`[7]` `https://cn.transcend-info.com/Support/FAQ-296`, Transcend, DDR4, DDR3, DDR2, DDR 及SDRAM各有何不同
