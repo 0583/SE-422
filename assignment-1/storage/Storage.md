@@ -41,7 +41,7 @@ Ceph utilizes a highly adaptive distributed metadata cluster architecture that d
 
 ## Evaluation
 > We evaluate our prototype under a range of microbenchmarks to demonstrate its performance, reliability, and scalability. In all tests, clients, OSDs, and MDSs are user processes running on a dual-processor Linux cluster with SCSI disks and communicating using TCP. In general, each OSD or MDS runs on its own host, while tens or hundreds of client instances may share the same host while generating workload.
-    ——「Ceph: A Scalable, High-Performance Distributed File System》」
+    ——「Ceph: A Scalable, High-Performance Distributed File System」
 
 
 
@@ -83,6 +83,10 @@ Evaluate metadata scalability using a 430 node partition of the alc Linux cluste
 * The I/O path is too long
 * Business continuity will be affected
 
+## References
+1. Ceph: A Scalable, High-Performance Distributed File System
+2. https://www.cnblogs.com/goldd/p/6610535.html 关于Ceph现状与未来的一些思考
+3. https://www.siliconhouse.net/support/top-6-advantages-ceph-storage/ Top 6 advantage of Ceph Storage Solution
 
 
 
