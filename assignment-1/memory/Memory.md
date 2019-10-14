@@ -51,7 +51,7 @@ Fortunately it was fixed in the later Windows NT series.
 
 ### Frequency
 
-It is quite strange when we know that even a memory has its frequency. You may start to imagine an garbage with a specific frequency... and then become confused. Let's make it clear: A piece of memory that reads "DDR4 2666MHz" implies that it has a maximum throughput of 2666 Mega-transfers per second.
+It is quite strange when we know that even a memory has its frequency. You may start to imagine an garage with a specific frequency... and then become confused. Let's make it clear: A piece of memory that reads "DDR4 2666MHz" implies that it has a maximum throughput of 2666 Mega-transfers per second.
 
 What if it's really so easy. Because as you learned in the ICS, the throughput isn’t the only important metric: otherwise, we’d be using GDDR6 for our CPUs by now. Latency is also a big factor.[6] Generally now the Memory Frequency isn't the major bottleneck in a whole PC, unless under some special cases such as CAD and those extreme gamers' playing experience. So that should not be a problem.
 
