@@ -95,11 +95,11 @@ You may access more types of DRAM's price [here](https://pcpartpicker.com/trends
 
 ## Comments
 
-I'm currently using a laptop with 16 GiB 2133 MHz LPDDR3 DRAM equipped. What to say, it's using old-fashioned DDR3 technique, and it's a Low Power style built for those mobile devices. But anyway, the bandwidth is not yet the bottleneck. 16 GiB is enough for me now anyway. It could support me running Docker Desktop, 2 JetBrains Application at once without suffering from severe notable speed-loss.
+I'm currently using a laptop with 16 GiB 2133 MHz LPDDR3 DRAM equipped. What to say, it's using old-fashioned DDR3 technique, and it's a Low Power style built for those mobile devices. But anyway, the bandwidth is not yet the bottleneck. 16 GiB is enough for me now anyway. It could support me running Docker Desktop, 2 JetBrains Applications at once without suffering from severe notable speed-loss.
 
 There are quite many jokes about it, the DRAM, that once Samsung has a stock fall, the DRAM would raise its price to balance its income. Sadly it seems to be true, seeing Samsung's monopoly state.
 
-DRAM is still an inmature technique for China, but they're still working on it. Wish their good luck.
+DRAM is still an inmature technique for China, but they're still working on it. Wish them good luck.
 
 ## References
 
