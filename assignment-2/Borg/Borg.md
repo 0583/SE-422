@@ -37,7 +37,7 @@
 * 用户通过RPC来操作Borg的job。
 * job和task的生命周期，如图。用户可以在运行时改变一个job中的task的属性，通过推送一个新的job配置给Borg。
 
-&emsp;&emsp;&emsp;![job & task 生命周期](img/job.png)
+&emsp;&emsp;&emsp;![job & task 生命周期](./img/job.PNG)
 
 ### 3. 优先级、配额和管理控制
 
@@ -58,7 +58,7 @@ Borg创造了一个稳定的“Borg name Service”(BNS) 名字给每个task。�
 ## 三、 Borg架构
 &emsp;&emsp;一个Borg的Cell包括一堆机器，一个逻辑的中心控制服务叫做Borgmaster，和在每台机器上跑的Borglet的agent进程。
 
-&emsp;&emsp;![](img/borg.png)
+&emsp;&emsp;![](./img/borg.PNG)
 
 ### 1. Borgmaster
 * Cell的Borgmaster由2个进程组成，主的Borgmaster进程和一个单独的scheduler
@@ -128,11 +128,11 @@ Borg创造了一个稳定的“Borg name Service”(BNS) 名字给每个task。�
 
 &emsp;&emsp;图中展现了在一个中等大小的Cell上分开跑prod和non-prod的工作负载将需要20-30%多的机器。这是因为prod的job通常会保留一些资源来应对极少发生的负载高峰，但实际上在大多情况下不会用这些资源。Borg把这批资源回收利用了来跑很多non-prod的工作，所以最终只需要更少的机器。 
 
-&emsp;&emsp;![](img/use.png)
+&emsp;&emsp;![](./img/use.PNG)
 
 &emsp;&emsp;大部分Borg cell被几千个用户共享使用。下图展现了为什么。如果一个用户消费超过了10TiB内存(或100TiB)，就把这个用户的工作负载分离到一个单独的Cell里面去。即使我们设置了这么高的阈值(来分离)，也需要2-16倍多的Cell，和20-150%多的机器。资源池的方案再次有效地节省了开销。
 
-&emsp;&emsp;![](img/why.png)
+&emsp;&emsp;![](./img/why.PNG)
 
 &emsp;&emsp;通过实验得出了共享并没有显著的增加程序运行的开销。 共享是有益的：比起CPU的降速，在各个方案里面减少机器更重要，这会带来减少所有资源的开销，包括内存和硬盘，不仅仅是CPU。
 
@@ -153,17 +153,17 @@ Borg创造了一个稳定的“Borg name Service”(BNS) 名字给每个task。�
 
 &emsp;&emsp;下图展示了如果没有资源再利用会需要更多的机器。在一个中等大小的Cell上大概有20%的工作负载跑在回收资源上。 
 
-&emsp;&emsp;![](img/reuse1.png)
+&emsp;&emsp;![](./img/reuse1.PNG)
 
 &emsp;&emsp;下图可以看到更多的细节，包括回收资源、实际使用资源和 限制资源 的比例。一个超内存限制的task首先会被重新调度，不管优先级有多高，所以这样就很少有task会超过内存限制。另一方面，CPU使用率是可以轻易被卡住的，所以短期的超过自留地资源的高峰时没什么损害的。 
 
-&emsp;&emsp;![](img/reuse2.png)
+&emsp;&emsp;![](./img/reuse2.PNG)
 
 &emsp;&emsp;在自留地和实际使用中间有一大片差距。为了测试这一点，Borg选择了一个cell然后调试它的预估参数，把安全区划小点，然后做了一个介于激进和基本之间的中庸策略跑，然后恢复到基本策略。 
 
 &emsp;&emsp;下图展现了结果。第二周自留地资源和实际资源的差值是最小的，比第三周要小，最大的是第一和第四周。和预期的一样，周2和周3的OOM率有一个轻微的提升。这是一个trade-off，对于Borg来说利大于弊，于是Borg把中庸策略的参数放到其他cell上部署运行。
 
-&emsp;&emsp;![](img/week.png)
+&emsp;&emsp;![](./img/week.PNG)
 
 ## 五、隔离性
 
