@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flasknode
-        image: registry.ng.bluemix.net/flask-node/app
+        image: yuxiqian/k8-example
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
