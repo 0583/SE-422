@@ -1,5 +1,6 @@
 #!/usr/bin/env bash 
 
+sudo snap install kubectl --classic
 
 # AWS
 export KUBERNETES_PROVIDER=aws; wget -q -O - https://get.k8s.io | bash
