@@ -144,14 +144,14 @@ spec:
         - containerPort: 80
 ```
 
-![f](./1.jpg)
+![f](./img/1.jpg)
 As can be observed from the output in shell, all of the pods scheduled by our customized scheduler are running and one is pending.
 
 ## Test
 ### Predicates
 We put "PodFitsHostResources" at the first place, ran five pods (their .yaml files in the testing directory), and derived the following results: 
-![pri](./predicate.jpg)
+![pri](./img/predicate.jpg)
 
 ### Priority
 We changed the weight of EqualPriority to 10, ran five pods, and derived the following results:
-![pre](./priority.jpg)
+![pre](./img/priority.jpg)
